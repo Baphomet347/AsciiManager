@@ -31,8 +31,10 @@ try:
 		datatext= file.read()
 		data = datatext.decode('utf-8')
 		file.close()
-		print "* text saved to clipboard. *"
 		pyperclip.copy(data)
+		print data
+		print ""
+		print "* "+command+" saved to clipboard. *"
 		
 except Exception as e:
 	print "command or text not found. try ascii -h/-help or ascii -l/-list."
