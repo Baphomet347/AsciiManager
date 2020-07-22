@@ -9,16 +9,13 @@ import sys
 import getopt
 import os
 
-command = sys.argv[1].lower()
+if len(sys.argv) > 1:
+    command = sys.argv[1].lower()
+else:
+    command = "-h"
 try: 
-#print 'Argument List:', str(sys.argv)
-#print ("First argument: %s" % str(sys.argv[1]))
 	script_dir = os.path.dirname(__file__)
 	if command == "-l" or command == "-list":
-		#currentDirectory = pathlib.Path('./txt')
-		#for currentFiles in currentDirectory.iterdir():
-		#removetable = str.maketrans('.txt', 'txt/')
-		#print currentFiles
 		rel_path = "txt/"
 		abs_file_path = os.path.join(script_dir, rel_path)
 		lst = sorted(os.listdir(abs_file_path))
