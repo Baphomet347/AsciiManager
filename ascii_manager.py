@@ -32,6 +32,7 @@ try:
 		data = datatext.decode('utf-8')
 		file.close()
 		pyperclip.copy(data)
+		print ""
 		print data
 		print ""
 		print "* "+command+" saved to clipboard. *"
